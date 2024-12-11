@@ -1,0 +1,10 @@
+name = "DDJ-FLX4"
+version = "1.0"
+
+[spec.decks.deck_1]
+play = []
+pause = []
+
+[spec.decks.deck_2]
+play = []
+pause = []
