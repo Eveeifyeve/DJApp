@@ -34,8 +34,17 @@
           packages = with pkgs; [
             openssl
             rust-analyzer
+						gtk4 # needed for applcation to show 
             toolchain
-          ];
+          ] ++ lib.optionals stdenv.isDarwin [ 
+						pkgs.apple-sdk_15 
+					] ++ lib.optionals pkgs.stdenv.isLinux [ 
+						pkgs.gcc
+
+						# Audio libraries needed 
+						pkgs.libjack2 
+						pkgs.alsa-lib
+					];
         };
       };
     };

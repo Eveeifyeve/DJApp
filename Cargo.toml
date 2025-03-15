@@ -1,4 +1,3 @@
 [workspace]
-member = [
-	"crates/dj-interface"
-]
+members = [ "crates/app", "crates/audio","crates/dj-interface", "crates/gui"]
+default-members = [ "crates/app" ]
